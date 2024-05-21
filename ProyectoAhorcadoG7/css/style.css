@@ -1,0 +1,375 @@
+@font-face {
+	font-family: "Skrawk Serif";
+	src: url("/fonts/skrawk_serif/Skrawk-Serif.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background: url("/img/pizarraNegra.jpg") no-repeat center  ;
+	background-size:cover;
+}
+.responsiveContainer {
+	max-width: 430px;
+	height: 100vh;
+}
+h1 {
+	text-align: center;
+	font-size: clamp(3em, 10vw, 5em);
+}
+.fuentePizarraBlanco {
+	font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	font-family: "East Sea Dokdo", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	color: rgb(242, 245, 247);
+}
+
+.fuentePizarraOtro {
+	font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	font-family: "East Sea Dokdo", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	color: rgb(236, 247, 245);
+	text-shadow: black 3px 3px 4px;
+}
+
+.wrapperImg {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.imagenPizarra {
+	width: 100%;
+	height: auto;
+}
+.pizarra {
+	display: grid;
+	grid-template-rows: 10% 90%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.gridInterfaz {
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+.gridMensajes {
+	display: grid;
+	grid-template-rows: 50% 50%;
+}
+
+.mensajesWrapper {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#mensajesErrorAcierto {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+#msgFinal {
+	width: 45vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#contenedorPalabraOculta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.horcaWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#imagen0 {
+	width: 100%;
+	height: auto;
+	margin-left: 20px;
+}
+
+#comenzarJuego {
+	width: 110px;
+	grid-column: 1/1;
+	border-radius: 20px;
+}
+
+#pista {
+	width: 110px;
+	height: 40px;
+	grid-column: 2/2;
+	border-radius: 20px;
+}
+
+#palabraOculta {
+	margin-bottom: 50px;
+	margin-right: 10px;
+	font-size: 2rem;
+	letter-spacing: 8px;
+}
+
+#darPista {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#spanPista {
+	height: 50px;
+	text-align: center;
+	margin-top: 70px;
+	font-size: 2rem;
+}
+
+#winGameOverImg {
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.winImg {
+	position: relative;
+	max-width: 90%;
+	size: cover;
+	height: auto;
+	z-index: 1;
+}
+
+.wrapperTeclado {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapperTeclas {
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.absolute {
+	position: absolute;
+	top: 0;
+}
+.imgFondo2 {
+	max-width: 100%;
+	height: 315px;
+	border: 3px solid rgb(88, 86, 86);
+	border-radius: 10px;
+}
+
+.letra {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 1.2rem;
+	width: 30px;
+	height: 30px;
+	margin: 2px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	font-weight: bold;
+	color: rgba(0, 0, 255, 0.849);
+	font-family: Skrawk Serif;
+	z-index: 100;
+}
+
+.letra:hover {
+	opacity: 0.8;
+}
+
+.letra:disabled {
+	color: rgba(255, 0, 0, 0.5);
+}
+
+.col {
+	width: 50%;
+	text-align: center;
+	display: grid;
+	display: flex;
+	gap: 25px;
+}
+.colTeclado {
+	width: 50%;
+	text-align: center;
+	display: flex;
+	gap: 20px;
+}
+
+.wrapperInicioPista {
+	width: 100%;
+	max-height: 226px;
+	height: auto;
+	display: flex;
+	display: grid;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	align-items: center;
+}
+
+.gridBotones {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	z-index: 1;
+}
+
+#flexRow {
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+}
+.z-indexP {
+	z-index: 1;
+}
+
+/* Teclado */
+#parteTeclado {
+	position: absolute;
+	bottom: 25px;
+	width: 100%;
+	grid-row: 3/5;
+	grid-column: 1/5;
+}
+
+#abecedario {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10px auto;
+	width: 80vw;
+	font-size: 1.5em;
+}
+
+#mostrarPalabra {
+	font-family: "East Sea Dokdo", sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: clamp(2em, 8vw, 4em);
+	pointer-events: none;
+	display: flex;
+	margin-top: 60px;
+	align-items: flex-start;
+	justify-content: center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+
+footer {
+	background-color: rgba(0, 0, 0, 0.699);
+	color: rgb(189, 185, 185);
+	font-size: 0.9em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+@media only screen and (min-width: 450px) and (max-width: 899px) {
+	.responsiveContainer {
+		max-width: 900px;
+	}
+
+	.imgFondo2 {
+		width: 100%;
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#parteTeclado {
+		font-size: 2rem;
+	}
+
+	.letra {
+		font-size: 2rem;
+	}
+
+	#winGameOverImg {
+		top: 100px;
+	}
+
+	.winImg {
+		max-width: 70%;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.responsiveContainer {
+		max-width: 700px;
+	}
+
+	.imgFondo2 {
+		margin: auto;
+		width: 100%;
+		height: 344px;
+	}
+
+	#parteTeclado {
+		width: 100%;
+		height: 100%;
+		font-size: 1rem;
+		position: relative;
+		top: 0;
+		bottom: 0;
+	}
+
+	.colTeclado {
+		margin-right: 20px;
+	}
+
+	.letra {
+		font-size: 2.5rem;
+		font-weight: lighter;
+	}
+
+	body {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.winImg {
+		max-width: 30%;
+		size: cover;
+		height: auto;
+		z-index: 1;
+		bottom: 200px;
+	}
+}
+
+

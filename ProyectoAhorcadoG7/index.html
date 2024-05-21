@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="authors" content="Roberto Panella, Tomás Guijarro, Julio Alvarez." >
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="/favicon/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<title>Juego del Ahorcado</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<main class="responsiveContainer">
+			<div class="pizarraWrapper">
+				<div class="wrapperImg">
+					<img
+						src="/img/fondo.png"
+						alt="es una pizarra"
+						class="imagenPizarra"
+					/>
+					<div class="pizarra">
+						<h1 class="fuentePizarraBlanco">Juego del ahorcado</h1>
+						<div class="gridInterfaz">
+							<div class="horcaWrapper">
+								<img id="imagen0" src="/img/img7.png" alt="" />
+							</div>
+							<div class="gridMensajes fuentePizarraBlanco">
+								<div class="mensajesWrapper">
+									<div id="spanPista">
+										<span id="huecoPista"></span>
+									</div>
+								</div>
+								<div id="contenedorPalabraOculta">
+									<p id="palabraOculta"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section>
+				<div class="fuentePizarraOtro" id="flexRow">
+					<p class="z-indexP" id="intentos" class="colorIntentos">
+						Intentos restantes: <span class="z-indexP" id="turnos">6</span>
+					</p>
+				</div>
+			</section>
+			<div>
+				<div class="wrapperInicioPista">
+					<div class="col fuentePizarraNegro gridBotones">
+						<button id="comenzarJuego" class="botonesOpciones">Jugar</button>
+						<button id="pista" class="botonesOpciones">Pista</button>
+					</div>
+				</div>
+				<section id="parteTeclado">
+					<div class="wrapperTeclado">
+						<img class="imgFondo2" src="/img/fondo2.jpg" alt="" />
+						<div class="colTeclado wrapperTeclas absolute">
+							<div class="flexRowTeclado" id="abcdario"></div>
+						</div>
+					</div>
+				</section>
+				<div id="winGameOverImg"></div>
+				<p id="mostrarPalabra"></p>
+			</div>
+		</main>
+		<footer><h2>Proyecto ahorcado Grupo F - Hack a Boss</h2></footer>
+		<script src="./JS/script2.js"></script>
+	</body>
+</html>
